@@ -1,0 +1,222 @@
+<!-- ---------------------------- -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Starboy</title>
+		<!-- <link
+			rel="stylesheet"
+			href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"
+		/> -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+		/>
+
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="jumbotron text-center">
+				<h1>STARBOY COFFEE</h1>
+			</div>
+			<div class="accountBtn">
+				<a href="/login"><button>Partner Login</button></a>
+
+				<a href="/signup"><button>New Partner</button> </a>
+			</div>
+			<form action="/order" method="POST">
+				<!-- <input type="checkbox" name="status" /> -->
+				<input
+					class="userInput"
+					type="text"
+					placeholder="Costumers Name"
+					name="costumerName"
+				/>
+				<input
+					class="userInput"
+					id="costumerOrder"
+					type="text"
+					placeholder="Costumers Order"
+					value=""
+					name="costumerOrder"
+					hidden
+				/>
+
+				<button type="submit" class="submitBtn controlBtn">+</button>
+			</form>
+
+			<div class="row align-items-start">
+				<div class="col">
+					<input type="text" id="drinkSize" hidden />
+					<h3>Drink Size</h3>
+					<button class="sizeBtn" value="small">Small</button>
+					<button class="sizeBtn" value="medium">Medium</button>
+					<button class="sizeBtn" value="large">Large</button>
+				</div>
+				<!-- !costumer order -->
+				<div class="col">
+					<input type="text" id="drinkOrder" hidden />
+					<h3>Costumers Order</h3>
+
+					<!-- !accordion start -->
+					<div class="accordion accordion-flush" id="accordionFlushExample">
+						<!-- *accordion one -->
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingOne">
+								<button
+									class="accordion-button collapsed"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseOne"
+									aria-expanded="false"
+									aria-controls="flush-collapseOne"
+								>
+									Espresso Drinks
+								</button>
+							</h2>
+							<div
+								id="flush-collapseOne"
+								class="accordion-collapse collapse"
+								aria-labelledby="flush-headingOne"
+								data-bs-parent="#accordionFlushExample"
+							>
+								<div class="accordion-body">
+									<button class="orderBtn" value="Espresso Shot">
+										Espresso Shot
+									</button>
+								</div>
+							</div>
+						</div>
+						<!-- *accordion two -->
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingTwo">
+								<button
+									class="accordion-button collapsed"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseTwo"
+									aria-expanded="false"
+									aria-controls="flush-collapseTwo"
+								>
+									Iced Coffees
+								</button>
+							</h2>
+							<div
+								id="flush-collapseTwo"
+								class="accordion-collapse collapse"
+								aria-labelledby="flush-headingTwo"
+								data-bs-parent="#accordionFlushExample"
+							>
+								<div class="accordion-body">
+									<button class="orderBtn" value="coffee4">Coffe2</button>
+								</div>
+							</div>
+						</div>
+						<!-- *accordion three -->
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingThree">
+								<button
+									class="accordion-button collapsed"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseThree"
+									aria-expanded="false"
+									aria-controls="flush-collapseThree"
+								>
+									Brewed Coffees
+								</button>
+							</h2>
+							<div
+								id="flush-collapseThree"
+								class="accordion-collapse collapse"
+								aria-labelledby="flush-headingThree"
+								data-bs-parent="#accordionFlushExample"
+							>
+								<div class="accordion-body">
+									<button class="orderBtn" value="coffee2">Coffe2</button>
+								</div>
+							</div>
+						</div>
+						<!-- *accordion four -->
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingFour">
+								<button
+									class="accordion-button collapsed"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseFour"
+									aria-expanded="false"
+									aria-controls="flush-collapseFour"
+								>
+									Teas
+								</button>
+							</h2>
+							<div
+								id="flush-collapseFour"
+								class="accordion-collapse collapse"
+								aria-labelledby="flush-headingFour"
+								data-bs-parent="#accordionFlushExample"
+							>
+								<div class="accordion-body">
+									<button class="orderBtn" value="coffee2">Coffe2</button>
+								</div>
+							</div>
+						</div>
+						<!-- *accordion five -->
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingFive">
+								<button
+									class="accordion-button collapsed"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#flush-collapseFive"
+									aria-expanded="false"
+									aria-controls="flush-collapseFive"
+								>
+									Specialties
+								</button>
+							</h2>
+							<div
+								id="flush-collapseFive"
+								class="accordion-collapse collapse"
+								aria-labelledby="flush-headingFive"
+								data-bs-parent="#accordionFlushExample"
+							>
+								<div class="accordion-body">
+									<button class="orderBtn" value="coffee2">
+										Chocolate Starboy Frap
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- !accordion end -->
+				</div>
+
+				<div class="col">
+					<input type="text" id="customize" hidden />
+					<h3>Customize</h3>
+					<button class="customBtn" value="decaf">Decaf</button>
+					<button class="customBtn" value="whippedCream">Whipped Cream</button>
+					<button class="customBtn" value="javachips">Java Chips</button>
+					<button class="customBtn" value="caramel">Caramel</button>
+					<button class="customBtn" value="sugar">Sugar</button>
+					<button class="customBtn" value="splenda">Splenda</button>
+					<button class="customBtn" value="honey">Honey</button>
+				</div>
+			</div>
+		</div>
+		<!-- <script src="index.js"></script> -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

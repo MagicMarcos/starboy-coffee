@@ -1,0 +1,487 @@
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+	box-sizing: border-box;
+}
+/* html {
+	font-size: 62.5%; 
+} */
+
+/* Clear fix hack */
+.clearfix:after {
+	content: '.';
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right;
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left;
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+/* html {
+	font-size: 62.5%;
+} */
+
+body {
+	color: black;
+	font-family: 'Zen Kurenaido', sans-serif;
+}
+.mobile {
+	display: none;
+}
+.desk {
+	display: block;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* font-family: 'Kanit', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Zen Kurenaido', sans-serif; */
+/******************************************
+/* BASE STYLES
+/*******************************************/
+.headerCont {
+	height: 100px;
+	/* background-color: rgb(41, 82, 53); */
+	color: antiquewhite;
+}
+#logo {
+	margin-top: 0;
+}
+#logo img {
+	margin: 3px 0 0 0;
+}
+header {
+	max-width: 1320px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+h1 img {
+	width: 90px;
+	margin-top: 10px;
+}
+.formCont-singin {
+	color: antiquewhite;
+}
+#costumerOrder {
+	display: none;
+}
+
+/* !signin */
+
+.formCont-singin {
+	color: black;
+	font-family: 'Ubuntu', sans-serif;
+}
+.signInHeader {
+	max-width: 1000px;
+}
+.signInBtn {
+	color: antiquewhite;
+	background: rgb(41, 82, 53);
+	box-shadow: 1px 1px rgb(44, 43, 39), inset 0 0 2px 3px rgba(58, 58, 58, 0.637);
+	border-radius: 5px;
+}
+
+.signInBtn:hover {
+	color: antiquewhite;
+	box-shadow: 0 0 2px 1px rgba(187, 167, 141, 0.705),
+		inset 0 0 2px 3px rgba(58, 58, 58, 0.637);
+}
+.signInBtn:active {
+	background-color: rgb(175, 43, 49);
+	color: rgb(196, 171, 24);
+}
+.accountBtn button {
+	background: rgb(41, 82, 53);
+	border: none;
+	/* color: rgb(175, 43, 49); */
+	color: antiquewhite;
+	font-family: 'Zen Kurenaido', sans-serif;
+
+	padding: 5px 10px;
+	border-radius: 5px;
+	margin-left: 5px;
+	box-shadow: 1px 1px rgba(187, 167, 141, 0.705),
+		inset 0 0 2px 3px rgba(58, 58, 58, 0.637);
+}
+.signIn:hover {
+	box-shadow: 0 0 3px 2px rgba(187, 167, 141, 0.705),
+		inset 0 0 3px 4px rgba(58, 58, 58, 0.637);
+}
+.signIn:active {
+	background-color: rgb(175, 43, 49);
+	color: rgb(196, 171, 24);
+}
+/* !nav */
+.navCont {
+	/* background: rgb(41, 82, 53); */
+	/* border: 3px solid red; */
+}
+.posNav {
+	/* background: rgb(41, 82, 53); */
+	/* color: antiquewhite; */
+	text-align: center;
+	font-size: 2rem;
+	padding-top: 5px;
+	padding-right: 5px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1320px;
+	/* border: 1px solid white; */
+}
+.userInput {
+	color: black;
+	border: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.295);
+	font-size: 1.5rem;
+	width: 100%;
+	background: transparent;
+}
+::placeholder {
+	color: black;
+}
+/* !ordershow */
+.orderCont {
+	padding: 10px;
+}
+.orderSum {
+	/* text-decoration: underline; */
+	font-family: 'Ubuntu', sans-serif;
+	margin-bottom: 25px;
+}
+#orderDisp {
+	height: 605px;
+	overflow: auto;
+
+	color: rgb(81, 60, 31);
+	padding: 10px;
+	border-radius: 5px;
+	padding: 25px 30px;
+	box-shadow: inset 0 0 3px 2px rgba(58, 58, 58, 0.473);
+}
+#orderDisp h3 {
+	/* text-decoration: underline; */
+}
+.dispInput {
+	background: transparent;
+	border: none;
+	font-size: 1.5rem;
+	margin-left: 10px;
+	padding-right: 9px;
+	width: 80%;
+}
+
+.dispHeader {
+	margin-top: 10px;
+}
+
+#customList {
+	list-style: circle;
+}
+
+#customList li {
+	font-size: 1.5rem;
+}
+
+/* !order choices */
+.orderColumn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 5px;
+}
+
+.orderBtns {
+	font-family: 'Ubuntu', sans-serif;
+	/* font-family: 'Zen Kurenaido', sans-serif; */
+	letter-spacing: 1px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: none;
+	border-radius: 10px;
+	height: 113px;
+	min-width: 100px;
+	width: 80%;
+	background: rgb(219, 169, 103);
+	color: rgb(241, 225, 225);
+	font-size: 18px;
+	box-shadow: 2px 2px rgb(100, 104, 101),
+		inset 0 0 3px 4px rgba(58, 58, 58, 0.301);
+}
+
+.orderBtns:hover {
+	background: rgba(219, 169, 103, 0.651);
+	box-shadow: 0 0 3px 2px rgb(100, 104, 101),
+		inset 0 0 4px 2px rgba(58, 58, 58, 0.377);
+}
+.orderBtns:active {
+	/* background-color: green; */
+	box-shadow: 0 0 3px 2px rgb(41, 82, 53),
+		inset 0 0 4px 2px rgba(139, 61, 61, 0.301);
+}
+/* !sizebtn */
+.sizeBtn {
+	color: rgb(81, 60, 31);
+}
+.sizeBtn:active {
+	color: antiquewhite;
+}
+/* !espressobtns */
+#macchiato {
+	background-color: rgb(178, 142, 106);
+}
+#macchiato:hover {
+	background-color: rgba(178, 142, 106, 0.842);
+}
+#macchiato:active {
+	/* background-color: green; */
+}
+#latte {
+	background-color: rgb(164, 126, 90);
+}
+#latte:hover {
+	background-color: rgb(164, 126, 90, 0.842);
+}
+#latte:active {
+	/* background-color: green; */
+}
+#americano {
+	background-color: rgb(138, 103, 63);
+}
+#americano:hover {
+	background-color: rgb(138, 103, 63, 0.842);
+}
+#americano:active {
+	/* background-color: green; */
+}
+#cappuchino {
+	background-color: rgb(102, 68, 41);
+}
+#cappuchino:hover {
+	background-color: rgb(102, 68, 41, 0.842);
+}
+#cappuchino:active {
+	/* background-color: green; */
+}
+
+#espresso {
+	background-color: rgb(93, 55, 32);
+}
+#espresso:hover {
+	background-color: rgb(93, 55, 32, 0.842);
+}
+#espresso:active {
+	/* background-color: green; */
+}
+/* !coffeebtns */
+#iced-coffee {
+	background-color: rgb(145, 89, 38);
+}
+#iced-coffee:hover {
+	background-color: rgb(145, 89, 38, 0.842);
+}
+#iced-coffee:active {
+	/* background-color: green; */
+}
+
+#cold-brew {
+	background-color: rgb(132, 77, 41);
+}
+#cold-brew:hover {
+	background-color: rgb(132, 77, 41, 0.842);
+}
+#cold-brew:active {
+	/* background-color: green; */
+}
+#coffee {
+	background-color: rgb(110, 57, 26);
+}
+#coffee:hover {
+	background-color: rgb(110, 57, 26, 0.842);
+}
+#coffee:active {
+	/* background-color: green; */
+}
+#vanilla-i-c {
+	background-color: rgb(82, 41, 20);
+}
+#vanilla-i-c:hover {
+	background-color: rgb(82, 41, 20, 0.842);
+}
+#vanilla-i-c:active {
+	/* background-color: green; */
+}
+
+#affogato {
+	background-color: rgb(72, 33, 17);
+}
+#affogato:hover {
+	background-color: rgb(72, 33, 17, 0.842);
+}
+#affogato:active {
+	/* background-color: green; */
+}
+
+/* !fraps */
+#javachip {
+	background-color: rgb(153, 122, 75);
+}
+#javachip:hover {
+	background-color: rgb(153, 122, 75, 0.842);
+}
+#javachip:active {
+	/* background-color: green; */
+}
+#caramel {
+	background-color: rgb(134, 103, 58);
+}
+#caramel:hover {
+	background-color: rgb(134, 103, 58, 0.842);
+}
+#caramel:active {
+	/* background-color: green; */
+}
+#vanilla {
+	background-color: rgb(115, 87, 48);
+}
+#vanilla:hover {
+	background-color: rgb(115, 87, 48, 0.842);
+}
+#vanilla:active {
+	/* background-color: green; */
+}
+#hazelnut {
+	background-color: rgb(81, 60, 31);
+}
+#hazelnut:hover {
+	background-color: rgb(81, 60, 31, 0.842);
+}
+#hazelnut:active {
+	/* background-color: green; */
+}
+#chocolate {
+	background-color: rgb(48, 34, 16);
+}
+#chocolate:hover {
+	background-color: rgb(48, 34, 16, 0.842);
+}
+#chocolate:active {
+	/* background-color: green; */
+}
+/* !bottom row */
+.bottomRow {
+	display: flex;
+	justify-content: space-between;
+}
+
+.bottomRow button {
+	width: 15%;
+	background-color: rgb(84, 69, 51);
+}
+.bottomRow button:hover {
+	background-color: rgba(84, 69, 51, 0.904);
+}
+.bottomRow .orderSubmit {
+	width: 100%;
+	background: rgb(41, 82, 53);
+	font-family: 'Zen Kurenaido', sans-serif;
+	color: antiquewhite;
+	font-size: 40px;
+	margin-right: 5px;
+}
+.bottomRow .orderSubmit:hover {
+	background-color: rgba(41, 82, 53, 0.938);
+}
+.orderSubmit:active {
+	background-color: green;
+}
+
+.customBtn {
+	margin-right: 5px;
+}
+
+/* !accordion */
+
+.accordion-button {
+	font-size: 1.5rem;
+}
+
+.accordion-button:not(.collapsed) {
+	background-color: rgb(41, 82, 53);
+	color: antiquewhite;
+}
+
+/* !media queries */
+@media screen and (max-width: 1030px) {
+	.orderBtns {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.navItem {
+		font-size: 1.5rem;
+	}
+	.orderBtns {
+		font-size: 0.8rem;
+	}
+	.orderSum {
+		text-align: center;
+	}
+}
+
+/* !mobile */
+@media screen and (max-width: 768px) {
+	/* #costumerOrder {
+		display: block;
+	} */
+	.mobile {
+		display: block;
+	}
+	.desk {
+		display: none;
+	}
+	#orderDisp {
+		height: 300px;
+	}
+	.bottomRow .orderSubmit {
+		background-color: rgb(41, 82, 53);
+	}
+	.bottomRow .orderSubmit:hover {
+		background-color: rgba(41, 82, 53, 0.918);
+	}
+	.accordionBtnsCont {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+	.orderBtns {
+		width: 100px;
+	}
+}
