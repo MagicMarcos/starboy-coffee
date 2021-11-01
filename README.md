@@ -1,13 +1,3 @@
-## Installation
-
-1. Clone repo
-2. run `npm install`
-
-## Usage
-
-1. run `node server.js`
-2. Navigate to `localhost:8080`
-
 #Starboy Coffee
 <p> A POS style app for ordering drinks.</p>
 
@@ -43,3 +33,13 @@
         <li> More costumizability for costumers</li>
     </ul>
     
+ ## Installation
+
+1. Clone repo
+2. run `npm install`
+
+## Usage
+
+1. run `node server.js`
+2. Navigate to `localhost:8080`
+
