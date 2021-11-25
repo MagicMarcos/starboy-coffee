@@ -1,6 +1,6 @@
 #Starboy Coffee
 <p> A POS style app for ordering drinks.</p>
-<p> See it live at <a href="https://gardner-grounds.herokuapp.com">StarBoy</a> </p>
+<p> See it live at <a href="https://gardner-grounds.herokuapp.com">StarBoy Coffee</a> </p>
 <h1>How It's Made:</h1>
 <p>Utilized: </p> 
     <ul> 
